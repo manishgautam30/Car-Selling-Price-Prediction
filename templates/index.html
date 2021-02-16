@@ -15,25 +15,25 @@
             <h2 class="text">Launched Year of Car</h2> 
             <br>
 
-            <input class="box" id="Year" name="Year" type="number "> 
+            <input class="box" id="Year"  placeholder="Enter Year" name="Year" type="number  "> 
             <br>
 
             <h3  class="text">Showroom Price of Car (In LAKHS)</h3>
              <br>
-            <input class="box" name="Present_Price" required="required">
+            <input class="box" placeholder="Enter Price" name="Present_Price" required="required">
             <br>
 
             <h3 class="text">Kilometers Drived</h3>
              <br>
-            <input class="box" name="Kms_Driven" required="required">  
+            <input class="box" placeholder="Enter Distance" name="Kms_Driven" required="required">  
             <br>
             <h3 class="text">Number of owners previously used Car</h3>
             <br>
-            <input class="box" name="Owner" required="required"> 
+            <input class="box" placeholder="Enter owners" name="Owner" required="required"> 
             <br>
             <h3 class="text">Fuel Type of Car</h3>
             <br>
-            <select name="Fuel_Type_Petrol" class="dropdown"  required="required">
+            <select name="Fuel_Type_Petrol"  class="dropdown"  required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="Diesel">Gas:CNG</option>
@@ -62,7 +62,10 @@
 
 
 
-        <br><br><h3 class="text2">{{ prediction_text }} <h3>
+        <br><br>
+        <div id="band"><h3 class="text2">{{ prediction_text }} <h3></h3></div>
+
+        
     </div>
 
 
@@ -70,14 +73,14 @@
 
     <style>
         body {
-            background-image: url("./images/car1.jpg");
+            background-image: url("https://raw.githubusercontent.com/manishgautam30/Car-Selling-Price-Prediction/main/templates/images/car1.jpg");
             background-repeat:no-repeat ;
             background-size: 110% 120%;
             background-attachment: fixed;
            
         }
         #imgcon{
-            background-image: url("./images/car2.jpg"); 
+            background-image: url("https://raw.githubusercontent.com/manishgautam30/Car-Selling-Price-Prediction/main/templates/images/car2.jpg"); 
             border-radius: 50%;
             background-size:contain;
             
@@ -94,10 +97,10 @@
         }
         
         .text{
-            background-image: url("./images/fontt.jpg"); 
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-color: black;
+            box-shadow: 1px 1px 2px black, 0 0 5px red, 0 0 5px red;
+            color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
             padding: 5px;
             padding-right: 15px;
             padding-left: 15px;
@@ -105,7 +108,7 @@
             border-radius: 10px;
             display: inline-block;
         font-weight: bolder;
-            color: white;
+            
             font-size: 30px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -144,7 +147,7 @@
         }
         
        #sub{
-           background-color: lightgray;
+           background-color: black;
             margin-left: 40px;
             background-size: contain;
             background-repeat: no-repeat;
@@ -156,28 +159,38 @@
             border-radius: 10px;
             display: inline-block;
         font-weight: bolder;
-            color: rgb(129, 24, 24);
+            color: red;
+            box-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue;
+
             font-size: 30px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         } 
         .text2{
-           background-color: White;
+           background-color: black;
             margin-left: 40px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            padding: 5px;
+            
+            padding: 30px;
             padding-right: 15px;
             padding-left: 15px;
             margin-right: 30px;
             border-radius: 10px;
             display: inline-block;
         font-weight: bolder;
-            color: black;
+        color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
             font-size: 30px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         } 
-        
+        #band{
+            border: 3px solid white;
+            box-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 350px;
+            right: 100px;
+        }
        
     </style>
 </body>
