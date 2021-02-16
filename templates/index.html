@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post" >
+            <div id="imgcon"><div id="heading">Car  Selling  Price  Prediction</div></div>
+            <h2 class="text">Launched Year of Car</h2> 
+            <br>
+
+            <input class="box" id="Year" name="Year" type="number "> 
+            <br>
+
+            <h3  class="text">Showroom Price of Car (In LAKHS)</h3>
+             <br>
+            <input class="box" name="Present_Price" required="required">
+            <br>
+
+            <h3 class="text">Kilometers Drived</h3>
+             <br>
+            <input class="box" name="Kms_Driven" required="required">  
+            <br>
+            <h3 class="text">Number of owners previously used Car</h3>
+            <br>
+            <input class="box" name="Owner" required="required"> 
+            <br>
+            <h3 class="text">Fuel Type of Car</h3>
+            <br>
+            <select name="Fuel_Type_Petrol" class="dropdown"  required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">Gas:CNG</option>
+            </select>  <br>
+            <h3 class="text">Your Designation</h3>
+            <br>
+            <select class="dropdown" name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Customer</option>
+            </select>
+            <br>
+            <h3 class="text"> Transmission Type</h3> 
+            <br>
+            <select class="dropdown" name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select> 
+            <br>
+            <br><br><button id="sub" type="submit ">Calculate</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3 class="text2">{{ prediction_text }} <h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-image: url("./images/car1.jpg");
+            background-repeat:no-repeat ;
+            background-size: 110% 120%;
+            background-attachment: fixed;
+           
+        }
+        #imgcon{
+            background-image: url("./images/car2.jpg"); 
+            border-radius: 50%;
+            background-size:contain;
+            
+        }
+        #heading{
+            text-align: center;
+            background-color: white;
+            color: black;
+            mix-blend-mode:screen;
+            padding: 10px;
+            font-size: 70px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 50%;
+        }
+        
+        .text{
+            background-image: url("./images/fontt.jpg"); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        font-weight: bolder;
+            color: white;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+        .box {
+            border-radius: 5px;
+            height: 35px;
+            width: 185px;
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+        }
+       
+        
+        
+        .dropdown {
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        
+        
+        
+        
+        
+        #sub:hover {
+            transition: .4s;
+            transform: scale(1.2);
+            box-shadow: 5px 3px 2px white;
+            background-color: black;
+            color: red;
+        }
+        
+       #sub{
+           background-color: lightgray;
+            margin-left: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        font-weight: bolder;
+            color: rgb(129, 24, 24);
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        } 
+        .text2{
+           background-color: White;
+            margin-left: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 5px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        font-weight: bolder;
+            color: black;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        } 
+        
+       
+    </style>
+</body>
+
+</html>
